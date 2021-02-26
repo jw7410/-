@@ -13,16 +13,27 @@
     function sendMessage() {
       var request = new XMLHttpRequest();
       request.open("POST", "https://discord.com/api/webhooks/814879380609171466/zTLB0IP9KTi6Zn6iKsYQU0dm2wFh3WbGFxsyRbpuD_m1GpEuYrL_FiorHqzuD-wR6r8Q");
-
       request.setRequestHeader('Content-type', 'application/json');
+
+      var myEmbed = {
+        author: {
+          name: "테스트"
+        },
+        title: "아아 마이크테스트",
+        description: "잘되려나?",
+        color: hexToDecimal("/HEX 1")
+      }
 
       var params = {
         username: "닭갈비노예",
-        avatar_url: "",
-        content: "아령하세여잇"
+        embeds: [ myEmbed ]
       }
 
       request.send(JSON.stringify(params));
+
+      function hexToDecimal(hex) {
+        return parseInt(hex.replace("#",""), 16)
+      }
     }
   </script>
 </html>
