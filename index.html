@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이름</title>
+    <title>닭갈비노예</title>
   </head>
   <body>
     <button onclick="sendMessage()">Send</button>
@@ -12,14 +12,14 @@
   <script>
     function sendMessage() {
       var request = new XMLHttpRequest();
-      request.open("POST", "웹후크 링크");
+      request.open("POST", "https://discord.com/api/webhooks/814879380609171466/zTLB0IP9KTi6Zn6iKsYQU0dm2wFh3WbGFxsyRbpuD_m1GpEuYrL_FiorHqzuD-wR6r8Q");
 
       request.setRequestHeader('Content-type', 'application/json');
 
       var params = {
-        username: "웹후크 이름",
-        avatar_url: "프로필 사진 URL",
-        content: "보낼 메시지"
+        username: "닭갈비노예",
+        avatar_url: "",
+        content: "아령하세여잇"
       }
 
       request.send(JSON.stringify(params));
